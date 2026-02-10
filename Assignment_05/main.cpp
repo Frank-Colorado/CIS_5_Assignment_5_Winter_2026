@@ -109,6 +109,8 @@ void highestGrade(Student students[], int count)
 
 	// First I set the highest grade to the first student's grade
 	float highest = students[0].studentGrades;
+	// I also hold the index of the student with the highest grade, so I can print out their name and id later
+	int highestIndex = 0;
 
 	// Then I loop through the students to find the highest grade
 	// I start at the 1st index because highest is set to the grade at the 0th index
@@ -117,8 +119,12 @@ void highestGrade(Student students[], int count)
 		if (students[i].studentGrades > highest) {
 			// Then I update the highest grade
 			highest = students[i].studentGrades;
+			// I also update the index of the student with the highest grade
+			highestIndex = i;
 		}
 	}
+	// After the loop, I can print out the highest grade and the student information
+	cout << students[highestIndex].studentName << " (ID: " << students[highestIndex].studentId << ") has the highest grade: " << highest << "\n";
 }
 void lowestGrade(Student students[], int count)
 {
@@ -130,6 +136,8 @@ void lowestGrade(Student students[], int count)
 	// TODO: Print out all the lowest grade in the array
 	// First I set the lowest grade to the first student's grade
 	float lowest = students[0].studentGrades;
+	// I hold the index of the student with the lowest grade
+	int lowestIndex = 0;
 
 	// Then I loop through the students to find the lowest grade
 	for (int i = 1; i < count; i++) {
@@ -137,13 +145,37 @@ void lowestGrade(Student students[], int count)
 		if (students[i].studentGrades < lowest) {
 			// Then I update the lowest grade
 			lowest = students[i].studentGrades;
+			// I also update the index of the student with the lowest grade
+			lowestIndex = i;
 		}
 	}
+	// After the loop, I can print out the lowest grade and the student information
+	cout << students[lowestIndex].studentName << " (ID: " << students[lowestIndex].studentId << ") has the lowest grade: " << lowest << "\n";
 }
 
 void averageGrade(Student students[], int count)
 {
+	// Check to see if there are any students in the record
+	if (count == 0) {
+		cout << "No students in the record.\n";
+		return;
+	}
 	// TODO: Print out the average grade of the students
+	// First I initialize a variable to hold the sum of the grades
+	float sum = 0.0;
+	// Then I loop through the students to calculate the sum of the grades
+	for (int i = 0; i < count; i++) {
+		sum += students[i].studentGrades;
+	}
+
+	// After the loop, I can calculate the average by dividing the sum by the count of students
+	float average = sum / count;
+
+	// Finally, I print out the average grade
+	cout << fixed << setprecision(2); // Set the precision to 2 decimal places
+	cout << "The average grade in the class is: " << average << "\n";
+
+
 }
 void printStudentId(Student students[], int count)
 {
