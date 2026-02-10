@@ -122,7 +122,23 @@ void highestGrade(Student students[], int count)
 }
 void lowestGrade(Student students[], int count)
 {
+	// Check to see if there are any students in the record
+	if (count == 0) {
+		cout << "No students in the record.\n";
+		return;
+	}
 	// TODO: Print out all the lowest grade in the array
+	// First I set the lowest grade to the first student's grade
+	float lowest = students[0].studentGrades;
+
+	// Then I loop through the students to find the lowest grade
+	for (int i = 1; i < count; i++) {
+		// If the current student's grade is lower than the lowest
+		if (students[i].studentGrades < lowest) {
+			// Then I update the lowest grade
+			lowest = students[i].studentGrades;
+		}
+	}
 }
 
 void averageGrade(Student students[], int count)
