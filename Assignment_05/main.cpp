@@ -192,5 +192,14 @@ void printStudentId(Student students[], int count)
 }
 void printStudentName(Student students[], int count)
 {
+	// Check to see if there are any students in the record
+	if (count == 0) {
+		cout << "No students in the record.\n";
+		return;
+	}
 	// TODO: Print out all the students name in the array
+	cout << "Student Names:\n";
+	for (int i = 0; i < count; i++) {
+		cout << students[i].studentName << "\n";
+	}
 }
