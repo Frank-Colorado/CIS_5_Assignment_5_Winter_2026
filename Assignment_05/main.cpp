@@ -32,14 +32,19 @@ int main() {
 	* Add the students here!
 	*/
 	//----------------------------------------------------------------------------------------
+	Student s1 = { 1001, "Alice", 85.5 };
+	Student s2 = { 1002, "Bob", 92.0 };
+	Student s3 = { 1003, "Charlie", 78.0 };
+	Student s4 = { 1004, "David", 88.5 };
+	Student s5 = { 1005, "Eve", 91.0 };
 
-
-
-
-
-
-
-
+	// Add students to the array
+	// Since I won't be modifying any of the students data, I can just copy the struct into the array.
+	students[count++] = s1;
+	students[count++] = s2;
+	students[count++] = s3;
+	students[count++] = s4;
+	students[count++] = s5;
 
 	//----------------------------------------------------------------------------------------
 
