@@ -179,7 +179,16 @@ void averageGrade(Student students[], int count)
 }
 void printStudentId(Student students[], int count)
 {
+	// Check to see if there are any students in the record
+	if (count == 0) {
+		cout << "No students in the record.\n";
+		return;
+	}
 	// TODO: Print out all the students id in the array
+	cout << "Student IDs:\n";
+	for (int i = 0; i < count; i++) {
+		cout << students[i].studentId << "\n";
+	}
 }
 void printStudentName(Student students[], int count)
 {
