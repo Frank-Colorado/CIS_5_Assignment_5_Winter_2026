@@ -40,11 +40,24 @@ int main() {
 
 	// Add students to the array
 	// Since I won't be modifying any of the students data, I can just copy the struct into the array.
+	// All the functions in the menu will simply be reading the data
 	students[count++] = s1;
 	students[count++] = s2;
 	students[count++] = s3;
 	students[count++] = s4;
 	students[count++] = s5;
+
+	// If I needed to modify the students data, like adding bonus points to their grades like previous assignments , then I would need to use pointers to modify the data in place.
+	// I would have to create the array like this:
+	// Student* students[MAX_STUDENTS];
+	// Then I would need every student added to be a reference to the original struct, like this:
+	// students[count++] = &s1;
+	// students[count++] = &s2;
+	// etc...
+	// This way if I modify the data in the array I would be modifying the original struct data
+	// Then when I call the functions in the menu, I would have to dereference the pointer to access the data, like this:
+	// (*students[i]).studentGrades in my functions instead of students[i].studentGrades
+
 
 	//----------------------------------------------------------------------------------------
 
