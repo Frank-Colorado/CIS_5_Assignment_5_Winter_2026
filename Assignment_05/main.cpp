@@ -32,6 +32,20 @@ int main() {
 	* Add the students here!
 	*/
 	//----------------------------------------------------------------------------------------
+	// Here I am creating 5 students.
+	// I am initializingt the students with their id, name, and grade
+	// This is the same as if I went through and set each field individually, like this:
+	// Student s1;
+	// Student s1.studentId = 1001;
+	// s1.studentName = "Alice";
+	// s1.studentGrades = 85.5;
+	// This is just a less tedious way to initialize the students, since I have all the data at once, I can just initialize it all at once with the curly braces.
+	// I could also use a constructor to initialize the students, but if I use a constructor then my code would change. 
+	// When adding students to the array , I would have to create the students with the constructor, like this:
+	// students[count++] = Student(1001, "Alice", 85.5);
+	// I chose not to use a constructor because the struct is pretty simple. If I wanted to add checks to ensure valid data when creating each student, then I would use a contructor
+	// For example, if I wanted to make sure that each student's grade is between 0 and 100 or if I wanted to make sure that the student id is a positive integer
+	// But all my student data in this case is hardcoded and valid
 	Student s1 = { 1001, "Alice", 85.5 };
 	Student s2 = { 1002, "Bob", 92.0 };
 	Student s3 = { 1003, "Charlie", 78.0 };
