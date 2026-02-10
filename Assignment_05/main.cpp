@@ -101,11 +101,23 @@ void printMenu() {
 void highestGrade(Student students[], int count)
 {
 	// TODO: Print out all the highest grade in the array
-
 	// Here is a simple check to ensure your code does not break
 	if (count == 0) {
 		cout << "No students in the record.\n";
 		return;
+	}
+
+	// First I set the highest grade to the first student's grade
+	float highest = students[0].studentGrades;
+
+	// Then I loop through the students to find the highest grade
+	// I start at the 1st index because highest is set to the grade at the 0th index
+	for (int i = 1; i < count; i++) {
+		// If the current student's grade is higher than the highest
+		if (students[i].studentGrades > highest) {
+			// Then I update the highest grade
+			highest = students[i].studentGrades;
+		}
 	}
 }
 void lowestGrade(Student students[], int count)
