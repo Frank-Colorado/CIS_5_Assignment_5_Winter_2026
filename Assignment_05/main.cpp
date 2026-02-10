@@ -69,8 +69,9 @@ int main() {
 	// students[count++] = &s2;
 	// etc...
 	// This way if I modify the data in the array I would be modifying the original struct data
-	// Then when I call the functions in the menu, I would have to dereference the pointer to access the data, like this:
-	// (*students[i]).studentGrades in my functions instead of students[i].studentGrades
+	// Then when I call the functions in the menu, I would have to dereference the pointer to access the data inside the function, like this:
+	// (*students[i]).studentGrades in my functions instead of just students[i].studentGrades
+	// This is because the array would be an array of pointers and not an array of objects
 
 
 	//----------------------------------------------------------------------------------------
