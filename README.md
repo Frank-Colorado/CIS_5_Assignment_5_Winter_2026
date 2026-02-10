@@ -24,3 +24,8 @@ Deliverable:
 
 Reminder: 
 I am not only grading for completion but for understanding as well, if you are unable to explain what your code does, even if you have a working solution, I won't be able to give you full points / assumed you just used AI to comeplete the assignment for you. 
+
+
+Here is the link to my video demonstration for this assignment: 
+
+https://vimeo.com/1163498822?share=copy&fl=sv&fe=ci
